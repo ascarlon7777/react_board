@@ -1,0 +1,39 @@
+.board-view-title {
+  padding: 15px;
+  text-align: center;
+}
+
+.board-view-tbl {
+  width: 80%;
+  margin: 20px auto;
+  border-spacing: 0;
+}
+
+.board-view-tbl td,
+.board-view-tbl th {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.board-view-tbl th {
+  background-color: rgb(75, 0, 224);
+  color: #fff;
+}
+
+.board-view-tbl .btn-box {
+  background-color: #fff;
+}
+
+.btn-box > button {
+  padding: 15px;
+  margin: 0px 10px;
+  background-color: rgb(75, 0, 224);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+.write-btn {
+  width: 80%;
+  margin: 0 auto;
+}

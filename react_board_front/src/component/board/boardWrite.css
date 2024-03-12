@@ -1,0 +1,43 @@
+.board-write-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.board-write-title {
+  text-align: center;
+  color: rgb(75, 0, 224);
+}
+
+.regist-wrap {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.input-wrap > label {
+  width: 15%;
+}
+
+.input-wrap > *:last-child {
+  width: 80%;
+  padding: 5px;
+  font-size: 18px;
+}
+
+#boardContent {
+  height: 200px;
+  resize: none;
+}
+
+#regist-btn {
+  width: 100%;
+  border: none;
+  background-color: rgb(75, 0, 224);
+  color: #fff;
+}

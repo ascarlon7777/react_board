@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  width: 1200px;
+  margin: 30px auto;
+  flex: 1;
+}
+
+.header {
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    hwb(260 0% 12%),
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 20px;
+}
+
+.header > div {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo > a {
+  font-weight: 900;
+  font-size: 32px;
+  color: #fff;
+}
+
+.link-box > a {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.menu > ul {
+  overflow: hidden;
+}
+.menu > ul > li {
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+
+.menu > ul > li > a {
+  color: #fff;
+  transition-duration: 0.3s;
+}
+
+.menu > ul > li > a:hover {
+  color: #fff;
+  font-weight: bold;
+}

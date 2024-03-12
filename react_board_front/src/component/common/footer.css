@@ -1,0 +1,9 @@
+.footer {
+  padding: 30px;
+  background-color: #eee;
+}
+
+.footer > div {
+  width: 1200px;
+  margin: 0 auto;
+}
