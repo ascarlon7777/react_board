@@ -1,0 +1,45 @@
+.modify-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modify-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.modify-tbl {
+  width: 90%; /* 이 부분을 .modify-tbl 선택자로 수정 */
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.modify-tbl th,
+.modify-tbl td {
+  /* 여기도 .modify-tbl로 수정 */
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.modify-tbl th {
+  width: 15%;
+  background-color: #11998e;
+  color: #fff;
+}
+
+.modify-tbl td > * {
+  width: 100%;
+}
+
+#modify-btn {
+  background-color: #fff;
+}
+
+#modify-btn > button {
+  background-color: #11998e;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}

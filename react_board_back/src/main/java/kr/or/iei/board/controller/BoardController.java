@@ -50,9 +50,8 @@ public class BoardController {
 	 
 	 @ResponseBody
 	 @GetMapping(value="/delete/{boardNo}")
-	 public int deleteBoard(@PathVariable int boardNo) {
-		 int result = boardService.deleteBoard(boardNo);
-		 return result;
+	 public int delete(@PathVariable int boardNo) {
+		 return boardService.deleteBoard(boardNo);
 	 }
 
 	 

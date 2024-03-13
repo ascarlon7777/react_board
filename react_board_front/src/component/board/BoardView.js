@@ -8,6 +8,7 @@ import axios from "axios";
 const BoardView = () => {
   const params = useParams();
   const boardNo = params.boardNo;
+  // hook은 항상 컴포넌트 중괄호 레벨에서 만들어야 함
   const navigate = useNavigate();
 
   /*
@@ -44,8 +45,7 @@ const BoardView = () => {
   }, []);
 
   const deleteBoard = () => {
-    const confirmed = window.confirm("게시글을 삭제하시겠습니까?");
-    if (confirmed) {
+    if (window.confirm("게시글을 삭제하시겠습니까?")) {
       axios
         .get("http://192.168.10.34:8888/board/delete/" + boardNo)
         .then((res) => {
@@ -59,6 +59,10 @@ const BoardView = () => {
           console.log(error);
         });
     }
+  };
+
+  const modifyBoard = () => {
+    navigate("/boardModify", { state: { board: board } });
   };
 
   return (
@@ -89,7 +93,7 @@ const BoardView = () => {
 
           <tr>
             <th className="btn-box" colSpan={2}>
-              <button>수정</button>
+              <button onClick={modifyBoard}>수정</button>
               <button onClick={deleteBoard}>삭제</button>
             </th>
           </tr>

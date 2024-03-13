@@ -5,6 +5,7 @@ import Main from "./component/common/Main";
 import BoardList from "./component/board/BoardList";
 import BoardView from "./component/board/BoardView";
 import BoardWrite from "./component/board/BoardWrite";
+import BoardModify from "./component/board/BoardModify";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/boardList" element={<BoardList />} />
           <Route path="/boardView/:boardNo" element={<BoardView />} />
           <Route path="/boardInsert" element={<BoardWrite />} />
+          <Route path="/boardModify" element={<BoardModify />} />
         </Routes>
       </div>
       <Footer />
