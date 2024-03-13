@@ -5,8 +5,8 @@ import { useState } from "react";
 const BoardModify = () => {
   const location = useLocation();
   const board = location.state.board;
-  const params = useParams();
-  console.log("과으연", params);
+  //   const params = useParams();
+  //   console.log("과으연", params);
   const [boardTitle, setBoardTitle] = useState(board.boardTitle);
   const changeTitle = (e) => {
     setBoardTitle(e.target.value);
