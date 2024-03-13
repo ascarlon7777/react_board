@@ -14,7 +14,7 @@ const Header = () => {
               <Link to="/boardList">게시판</Link>
             </li>
             <li>
-              <Link to="/memberList">회원</Link>
+              <Link to="/userList">회원</Link>
             </li>
           </ul>
         </div>

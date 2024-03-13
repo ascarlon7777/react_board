@@ -1,0 +1,43 @@
+.user-info-wrap{
+    margin: 0 auto;
+    width: 600px;
+}
+
+.user-info-tbl{
+    margin: 0 auto;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.user-info-title>th{
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rebeccapurple;
+    color: white;
+    height: 50px;
+}
+
+.user-info-tbl>tbody>tr>th{
+    height: 50px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.user-info-tbl>tbody>tr>td{
+    text-indent: 20px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.user-info-tbl>tbody>tr>.btn-box{
+    border: 0;
+    height: 100px;
+}
+
+.update-btn>button{
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -6,6 +6,9 @@ import BoardList from "./component/board/BoardList";
 import BoardView from "./component/board/BoardView";
 import BoardWrite from "./component/board/BoardWrite";
 import BoardModify from "./component/board/BoardModify";
+import UserList from "./component/user/UserList";
+import UserInfo from "./component/user/UserInfo";
+import UpdateUser from "./component/user/UpdateUser";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/boardView/:boardNo" element={<BoardView />} />
           <Route path="/boardInsert" element={<BoardWrite />} />
           <Route path="/boardModify" element={<BoardModify />} />
+          <Route path="/userList" element={<UserList />} />
+          <Route path="/userInfo/:userNo" element={<UserInfo />} />
+          <Route path="/updateUser/" element={<UpdateUser />} />
         </Routes>
       </div>
       <Footer />

@@ -1,0 +1,35 @@
+.user-title {
+    padding: 15px;
+    color: rgb(75, 0, 224);
+}
+
+.user-tbl {
+    width: 100%;
+    margin: 20px auto;
+    border-spacing: 0;
+}
+
+.user-tbl>thead>tr>th {
+    background-color: rgb(75, 0, 224);
+    height: 50px;
+    color: white;
+}
+
+.user-tbl>tbody>tr>td{
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.user-tbl>tbody>tr>td>button{
+    width: 50px;
+    height: 30px;
+    background-color: rgb(75, 0, 224);
+    color: white;
+}
+
+.user-list-title{
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}

@@ -20,20 +20,20 @@ const BoardModify = () => {
   };
 
   const boardNo = board.boardNo;
-  const modify = () =>{
-    const obj = {boardNo, boardTitle, boardContent};
+  const modify = () => {
+    const obj = { boardNo, boardTitle, boardContent };
     axios
-    .post("http://192.168.10.20:8888/board", obj)
-    .then((res) =>{
-      if(res.data.message === "수정 성공"){
-        navigate("/boardView/" + boardNo);
-      }else{
-        navigate("/boardList");
-      }
-    })
-    .catch((res) =>{
-      console.log(res);
-    });
+      .patch("http://192.168.10.20:8888/board", obj)
+      .then((res) => {
+        if (res.data.message === "수정 성공") {
+          navigate("/boardView/" + boardNo);
+        } else {
+          navigate("/boardList");
+        }
+      })
+      .catch((res) => {
+        console.log(res);
+      });
   };
   return (
     <div className="modify-wrap">
