@@ -22,16 +22,19 @@ const BoardModify = () => {
   const boardNo = board.boardNo;
   const modify = () =>{
     const obj = {boardNo, boardTitle, boardContent};
-    axios.post("http://192.168.10.20:8888/boardModify")
+    axios
+    .post("http://192.168.10.20:8888/board", obj)
     .then((res) =>{
-      if(res.data === 1){
+      if(res.data.message === "수정 성공"){
         navigate("/boardView/" + boardNo);
       }else{
         navigate("/boardList");
       }
     })
-    .catch((res) =>{})
-  }
+    .catch((res) =>{
+      console.log(res);
+    });
+  };
   return (
     <div className="modify-wrap">
       <h2 className="modify-title">게시글 수정</h2>
@@ -72,7 +75,7 @@ const BoardModify = () => {
           </tr>
           <tr>
             <th id="modify-btn" colSpan={2}>
-              <button id="modify-btn"  onClick={modify}>수정하기</button>
+              <button onClick={modify}>수정하기</button>
             </th>
           </tr>
         </tbody>

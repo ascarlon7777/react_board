@@ -34,10 +34,11 @@ const BoardView = () => {
 
   useEffect(() => {
     axios
-      .get("http://192.168.10.20:8888/board/view/" + boardNo)
+      .get("http://192.168.10.20:8888/board/" + boardNo)
       .then((res) => {
-        console.log(res);
-        setBoard(res.data);
+        if(res.data.message === "조회 성공"){
+          setBoard(res.data.data);
+        }
       })
       .catch((res) => {
         console.log(res);
@@ -47,9 +48,9 @@ const BoardView = () => {
   const deleteBoard = () => {
     if (window.confirm("게시글을 삭제하시겠습니까?")) {
       axios
-        .get("http://192.168.10.20:8888/board/delete/" + boardNo)
+        .delete("http://192.168.10.20:8888/board/" + boardNo)
         .then((res) => {
-          if (res.data === 1) {
+          if (res.data.message === "삭제성공") {
             navigate("/boardList");
           } else {
             alert("문제발생 빨리찾아");

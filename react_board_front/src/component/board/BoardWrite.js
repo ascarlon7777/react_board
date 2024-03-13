@@ -17,9 +17,9 @@ const BoardWrite = () => {
     if (boardTitle !== "" && boardContent !== "" && boardWriter !== "") {
       const obj = { boardTitle, boardContent, boardWriter }; //같은 키값으로 만들어 줌
       axios
-        .post("http://192.168.10.20:8888/board/insert", obj)
+        .post("http://192.168.10.20:8888/board", obj)
         .then((res) => {
-          if (res.data === 1) {
+          if (res.data.message === "작성 성공") {
             navigate("/boardList");
           } else {
             alert("문제발생 빨리찾아");

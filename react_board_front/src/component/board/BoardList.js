@@ -42,9 +42,9 @@ const BoardList = () => {
   useEffect(() => {
     console.log("useEffect 내부");
     axios
-      .get("http://192.168.10.20:8888/board/list")
+      .get("http://192.168.10.20:8888/board")
       .then((res) => {
-        setBoardList(res.data); // 상태 업데이트
+        setBoardList(res.data.data); // 데이터에 다른 데이터 붙여넣었으므로
       })
       .catch((error) => {
         console.log(error);
