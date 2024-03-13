@@ -53,6 +53,12 @@ public class BoardController {
 	 public int delete(@PathVariable int boardNo) {
 		 return boardService.deleteBoard(boardNo);
 	 }
+	 
+	 @ResponseBody
+	 @PostMapping(value="/modify")
+	 public int modify(@RequestBody Board b) {
+		 return boardService.modifyBoard(b);
+	 }
 
 	 
 	 

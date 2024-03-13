@@ -15,7 +15,7 @@ const BoardView = () => {
   useEffect(() => {
     console.log("useEffect 내부");
     axios
-      .get("http://192.168.10.34:8888/board/list")
+      .get("http://192.168.10.20:8888/board/list")
       .then((res) => {
         setBoardList(res.data); // 상태 업데이트
       })
@@ -34,7 +34,7 @@ const BoardView = () => {
 
   useEffect(() => {
     axios
-      .get("http://192.168.10.34:8888/board/view/" + boardNo)
+      .get("http://192.168.10.20:8888/board/view/" + boardNo)
       .then((res) => {
         console.log(res);
         setBoard(res.data);
@@ -47,7 +47,7 @@ const BoardView = () => {
   const deleteBoard = () => {
     if (window.confirm("게시글을 삭제하시겠습니까?")) {
       axios
-        .get("http://192.168.10.34:8888/board/delete/" + boardNo)
+        .get("http://192.168.10.20:8888/board/delete/" + boardNo)
         .then((res) => {
           if (res.data === 1) {
             navigate("/boardList");

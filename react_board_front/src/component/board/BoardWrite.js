@@ -17,7 +17,7 @@ const BoardWrite = () => {
     if (boardTitle !== "" && boardContent !== "" && boardWriter !== "") {
       const obj = { boardTitle, boardContent, boardWriter }; //같은 키값으로 만들어 줌
       axios
-        .post("http://192.168.10.34:8888/board/insert", obj)
+        .post("http://192.168.10.20:8888/board/insert", obj)
         .then((res) => {
           if (res.data === 1) {
             navigate("/boardList");

@@ -17,6 +17,8 @@ public interface BoardDao {
 
 	int deleteBoard(int boardNo);
 
+	int modifyBoard(Board b);
+
 
 	
 	

@@ -1,9 +1,11 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 import "./boardModify.css";
 import { useState } from "react";
+import axios from "axios";
 
 const BoardModify = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const board = location.state.board;
   //   const params = useParams();
   //   console.log("과으연", params);
@@ -18,7 +20,18 @@ const BoardModify = () => {
   };
 
   const boardNo = board.boardNo;
-
+  const modify = () =>{
+    const obj = {boardNo, boardTitle, boardContent};
+    axios.post("http://192.168.10.20:8888/boardModify")
+    .then((res) =>{
+      if(res.data === 1){
+        navigate("/boardView/" + boardNo);
+      }else{
+        navigate("/boardList");
+      }
+    })
+    .catch((res) =>{})
+  }
   return (
     <div className="modify-wrap">
       <h2 className="modify-title">게시글 수정</h2>
@@ -59,7 +72,7 @@ const BoardModify = () => {
           </tr>
           <tr>
             <th id="modify-btn" colSpan={2}>
-              <button id="modify-btn">수정하기</button>
+              <button id="modify-btn"  onClick={modify}>수정하기</button>
             </th>
           </tr>
         </tbody>

@@ -25,4 +25,11 @@ VALUES (board_seq.nextval, #{boardTitle}, #{boardContent}, #{boardWriter}, sysda
 	delete from board where board_no = #{boardNo}
 	
 	</delete>
+	
+	<update id="modifyBoard">
+		update board set
+			board_title=#{boardTitle},
+			board_content=#{boardContent}
+		where board_no = #{boardNo}
+	</update>
 </mapper>
